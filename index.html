@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>River Civilization Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="game">
+
+    <div id="screen1" class="screen active">
+        <h1>River Civilization Simulator</h1>
+        <p>Learn how rivers support civilizations and then build your own!</p>
+        <button onclick="showScreen('screen2')">Start</button>
+    </div>
+
+    <div id="screen2" class="screen">
+        <h2>What is a River?</h2>
+        <p>
+            A river is a flowing body of water that begins at a source and ends at a mouth.
+            Rivers provide water, transportation, fertile soil, food, and trade routes.
+        </p>
+        <button onclick="showScreen('screen3')">Next</button>
+    </div>
+
+    <div id="screen3" class="screen">
+        <h2>The Nile River</h2>
+        <p>
+            The Nile helped support ancient civilizations by providing water, fertile floodplains,
+            transportation, and trade opportunities. Cities and farms developed along its banks
+            for thousands of years.
+        </p>
+        <button onclick="showScreen('riverSelect')">Continue</button>
+    </div>
+
+    <div id="riverSelect" class="screen">
+        <h2>Choose Your River</h2>
+
+        <button onclick="startGame('Colorado River')">
+            Colorado River (Mountain)
+        </button>
+
+        <button onclick="startGame('Amazon River')">
+            Amazon River (Rainforest)
+        </button>
+
+        <button onclick="startGame('Mississippi River')">
+            Mississippi River (Trade/Coastal)
+        </button>
+    </div>
+
+    <div id="gameplay" class="screen">
+
+        <h2 id="riverName"></h2>
+
+        <div class="stats">
+            <p>Money: $<span id="money">10000</span></p>
+            <p>Population: <span id="population">0</span></p>
+            <p>River Health: <span id="health">100</span></p>
+            <p>Turn: <span id="turn">1</span>/5</p>
+        </div>
+
+        <div class="buildings">
+            <button onclick="build('farm')">Farm ($1000)</button>
+            <button onclick="build('town')">Town ($2000)</button>
+            <button onclick="build('factory')">Factory ($3000)</button>
+            <button onclick="build('port')">Port ($4000)</button>
+            <button onclick="build('treatment')">Water Treatment ($2500)</button>
+        </div>
+
+        <br>
+
+        <button onclick="endTurn()">End Turn</button>
+
+        <p id="message"></p>
+
+    </div>
+
+    <div id="disaster" class="screen">
+        <h2>Oil Spill Disaster!</h2>
+
+        <p>
+            A construction accident has caused an oil spill in your river.
+            What will you do?
+        </p>
+
+        <button onclick="disasterChoice('ignore')">
+            Ignore It
+        </button>
+
+        <button onclick="disasterChoice('partial')">
+            Partial Cleanup
+        </button>
+
+        <button onclick="disasterChoice('full')">
+            Full Cleanup
+        </button>
+    </div>
+
+    <div id="results" class="screen">
+        <h2>Results</h2>
+
+        <p id="ending"></p>
+
+        <p id="finalStats"></p>
+
+        <button onclick="location.reload()">
+            Play Again
+        </button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
