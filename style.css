@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #eef5ff;
+    text-align: center;
+    padding: 20px;
+}
+
+.screen {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+button {
+    padding: 12px;
+    margin: 8px;
+    cursor: pointer;
+}
+
+.stats {
+    margin: 20px;
+    font-size: 18px;
+}
+
+.buildings button {
+    display: block;
+    margin: 10px auto;
+    width: 220px;
+}
+
+#message {
+    font-weight: bold;
+    margin-top: 20px;
+}
